@@ -38,9 +38,14 @@ class ArunAIChatStandalone {
             }
         });
 
+        // Auto-expand textarea as user types without jitter
         this.userInput.addEventListener('input', () => {
-            this.userInput.style.height = 'auto';
-            this.userInput.style.height = (this.userInput.scrollHeight) + 'px';
+            if (!this.userInput.value.trim()) {
+                this.userInput.style.height = '';
+            } else {
+                this.userInput.style.height = 'auto';
+                this.userInput.style.height = Math.min(this.userInput.scrollHeight, 80) + 'px';
+            }
         });
 
         document.querySelectorAll('.prompt-chip').forEach(chip => {
@@ -66,7 +71,7 @@ class ArunAIChatStandalone {
 
         this.appendUserMessage(text);
         this.userInput.value = '';
-        this.userInput.style.height = 'auto';
+        this.userInput.style.height = '';
 
         this.showTyping(true);
         this.scrollToBottom();

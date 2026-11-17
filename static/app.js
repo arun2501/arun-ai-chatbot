@@ -49,10 +49,14 @@ class ArunAIChat {
             }
         });
 
-        // Auto-expand textarea as user types
+        // Auto-expand textarea as user types without jitter
         this.userInput.addEventListener('input', () => {
-            this.userInput.style.height = 'auto';
-            this.userInput.style.height = (this.userInput.scrollHeight) + 'px';
+            if (!this.userInput.value.trim()) {
+                this.userInput.style.height = '';
+            } else {
+                this.userInput.style.height = 'auto';
+                this.userInput.style.height = Math.min(this.userInput.scrollHeight, 80) + 'px';
+            }
         });
 
         // Quick prompt chips in Welcome box
@@ -84,7 +88,7 @@ class ArunAIChat {
         // Render user message bubble
         this.appendUserMessage(text);
         this.userInput.value = '';
-        this.userInput.style.height = 'auto';
+        this.userInput.style.height = '';
 
         // Show typing indicator
         this.showTyping(true);
