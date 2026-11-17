@@ -1,0 +1,22 @@
+{
+  "publications": [
+    {
+      "title": "ML based Smart e - Public Distribution System",
+      "publisher": "IEEE Xplore",
+      "publication_date": "November 2025",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11382690",
+      "abstract": "Presents an AI-enabled Public Distribution System incorporating facial recognition biometric verification, OTP fallback, crowd estimation queue monitoring, and integrated digital payment to ensure transparency, security, and reduced waiting times in government ration distribution.",
+      "authors": ["Arunkumar K R", "Research Team at VCET"],
+      "keywords": ["Machine Learning", "e-PDS", "Face Recognition", "Crowd Detection", "Public Welfare AI", "Cloud Architecture"]
+    },
+    {
+      "title": "ML Based Fruit Health and Quality Analysis System",
+      "publisher": "IEEE Xplore",
+      "publication_date": "June 2025",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11012639",
+      "abstract": "Proposes a Multi-Modal Convolutional Neural Network (MMCNN) combining spatial features from RGB camera images and spectral dimensionality-reduced data via PCA to evaluate fruit disease and internal chemical quality indicators (sugar, moisture), optimized using Genetic Algorithms.",
+      "authors": ["Arunkumar K R", "Research Team at VCET"],
+      "keywords": ["Multi-Modal CNN", "Spectral Analysis", "Genetic Algorithm", "Principal Component Analysis", "Fruit Quality Grading", "Computer Vision"]
+    }
+  ]
+}

@@ -1,69 +1,89 @@
-import random
-import json
-import torch
+"""
+chat.py
+Core Chat Controller for Arunkumar K R's Personal Chatbot.
+Integrates RAGEngine with ResponseSynthesizer for full-context, multi-angle responses.
+Zero paid API keys needed, with optional Free Cloud LLM support.
+"""
 
-from model import NeuralNet
-from nltk_utils import bag_of_words, tokenize
+import os
+import sys
+from rag_engine import RAGEngine
+from synthesizer import ResponseSynthesizer
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
 
-with open('intents.json', 'r', encoding='utf-8') as json_data:
-    intents = json.load(json_data)
+bot_name = "Arun AI"
+rag_engine = RAGEngine()
+synthesizer = ResponseSynthesizer()
 
-FILE = "data.pth"
-data = torch.load(FILE, map_location=device)
+def get_detailed_response(msg: str, groq_key: str = None, gemini_key: str = None) -> dict:
+    """
+    Primary interface for RAG chat.
+    Returns:
+        dict: {
+            'answer': str,
+            'engine': str,
+            'sources': list[str],
+            'suggested_chips': list[str]
+        }
+    """
+    if not msg or not msg.strip():
+        return {
+            'answer': "Please ask a question about Arunkumar's background, education, projects, or experience!",
+            'engine': 'System',
+            'sources': [],
+            'suggested_chips': ["🚀 Top Projects", "💼 Work Experience", "🎓 Education & CGPA", "📞 Contact & Hire"]
+        }
 
-input_size = data["input_size"]
-hidden_size = data["hidden_size"]
-output_size = data["output_size"]
-all_words = data['all_words']
-tags = data['tags']
-model_state = data["model_state"]
+    # Update keys if supplied dynamically
+    if groq_key or gemini_key:
+        synthesizer.update_keys(groq_key=groq_key, gemini_key=gemini_key)
 
-model = NeuralNet(input_size, hidden_size, output_size).to(device)
-model.load_state_dict(model_state)
-model.eval()
+    # 1. Retrieve top-scoring semantic chunks
+    retrieved_chunks = rag_engine.retrieve(msg, top_k=4)
 
-bot_name = "ArunkumarBot"
-context = {"last_tag": None}  # Better context tracking
+    # 2. Synthesize multi-angle response
+    result = synthesizer.synthesize(msg, retrieved_chunks)
+    return result
 
+def get_response(msg: str) -> str:
+    """Legacy helper returning plain string response."""
+    res = get_detailed_response(msg)
+    return res['answer']
 
-def get_response(msg):
-    sentence = tokenize(msg.lower())  # Case-insensitive
-    X = bag_of_words(sentence, all_words)
-    X = X.reshape(1, X.shape[0])
-    X = torch.from_numpy(X).to(device)
-
-    output = model(X)
-    _, predicted = torch.max(output, dim=1)
-
-    tag = tags[predicted.item()]
-    probs = torch.softmax(output, dim=1)
-    prob = probs[0][predicted.item()]
-
-    # Confidence threshold
-    CONF_THRESHOLD = 0.75  
-
-    if prob.item() >= CONF_THRESHOLD:
-        for intent in intents['intents']:
-            if tag == intent["tag"]:
-                # Context-aware follow-ups
-                if tag == "yes_followup" and context["last_tag"] in ["education", "internship", "certifications", "projects_overview"]:
-                    return random.choice(intent['responses'])
-                # Save last tag for follow-up handling
-                context["last_tag"] = tag
-                return random.choice(intent['responses'])
-
-    # If uncertain, return fallback
-    return random.choice([resp for resp in intents['intents'] if resp["tag"] == "fallback"][0]["responses"])
-
+def sync_knowledge_base():
+    """Trigger live sync from portfolio and rebuild RAG index."""
+    try:
+        from sync_portfolio import fetch_portfolio_data
+        fetch_portfolio_data()
+    except Exception as e:
+        print(f"[chat.py] Portfolio sync notice: {e}")
+    return rag_engine.reindex()
 
 if __name__ == "__main__":
-    print("Let's chat with ArunkumarBot! (type 'quit' to exit)")
-    while True:
-        sentence = input("You: ")
-        if sentence.lower() == "quit":
-            break
+    print(f"==================================================")
+    print(f"  Let's chat with {bot_name}! (Type 'quit' or 'exit' to end)")
+    print(f"  Ask anything about Arunkumar's Projects, Skills,")
+    print(f"  Internships, IEEE Papers, CGPA, or Contact Info.")
+    print(f"==================================================\n")
 
-        resp = get_response(sentence)
-        print(f"{bot_name}: {resp}") 
+    while True:
+        try:
+            sentence = input("You: ").strip()
+            if sentence.lower() in ["quit", "exit", "q"]:
+                print(f"{bot_name}: Thank you for chatting! Best wishes!")
+                break
+            if not sentence:
+                continue
+
+            resp = get_detailed_response(sentence)
+            print(f"\n{bot_name} [{resp['engine']}]:\n{resp['answer']}\n")
+            if resp.get('suggested_chips'):
+                print(f"Suggestions: {' | '.join(resp['suggested_chips'])}\n")
+        except (KeyboardInterrupt, EOFError):
+            print("\nExiting chat. Have a great day!")
+            break

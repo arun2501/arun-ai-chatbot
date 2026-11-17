@@ -1,0 +1,26 @@
+# Environment variables (Never upload API keys to GitHub!)
+.env
+.env.local
+*.env
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE configurations
+.vscode/
+.idea/
+
+# Operating system files
+Thumbs.db
+.DS_Store
+
+# Archived legacy files
+archive_legacy_intent_bot/

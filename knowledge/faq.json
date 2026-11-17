@@ -1,0 +1,56 @@
+{
+  "faq": [
+    {
+      "question": "Why should we hire Arunkumar?",
+      "answer": "Arunkumar brings a rare combination of robust Full Stack engineering (Java, Spring Boot, React.js) and applied AI/ML research with 2 published IEEE papers. He has proven industry internship experience at Elysium Technologies building production-grade Asset Management platforms and at Reccsar developing e-commerce solutions. Furthermore, his national award-winning IoT Pulse Nebulizer project proves he can independently take complex real-world problems from concept to execution. He is technically strong, self-motivated, proactive, and ready to make an immediate impact."
+    },
+    {
+      "question": "What roles or positions is Arunkumar looking for?",
+      "answer": "Arunkumar is seeking roles in:\n1. Full Stack Developer (Java + React / Spring Boot)\n2. Backend Software Engineer (Java, Python, REST APIs, Microservices)\n3. AI / Machine Learning Engineer (Computer Vision, ML pipelines, RAG)\n4. Data Analyst / Business Intelligence\nHe is open to full-time roles, software engineering internships, graduate programs, and remote or on-site positions."
+    },
+    {
+      "question": "How can I contact or hire Arunkumar?",
+      "answer": "You can reach Arunkumar directly via:\n- 📞 Phone: +91 8778588180\n- 📧 Email: krarun2504@gmail.com\n- 💼 LinkedIn: https://www.linkedin.com/in/arunkumar-kr-3364012b3\n- 💻 GitHub: https://github.com/Arunkumar1234KR\n- 🌐 Portfolio: https://krarun-portfolio.netlify.app/\n- 📄 Download Resume: https://krarun-portfolio.netlify.app/assets/img/913122205009_KR%20ARUNKUMAR.pdf"
+    },
+    {
+      "question": "What is Arunkumar's educational background and CGPA?",
+      "answer": "Arunkumar is currently in his final year of B.Tech in Information Technology (Honors) at Velammal College of Engineering and Technology, Madurai (2022 - 2026), holding an impressive CGPA of 8.84. Prior to that, he scored 92.50% in his 12th HSC and 85.40% in his 10th SSLC at Muthuthevar Mukkulathore Hr. Sec. School."
+    },
+    {
+      "question": "What are Arunkumar's technical skills?",
+      "answer": "Arunkumar's core technical toolkit includes:\n- **Programming**: Java, Python, JavaScript (ES6+), C\n- **Frameworks & Libraries**: Spring Boot, Spring Data JPA, React.js, Tailwind CSS, Bootstrap, Flask\n- **Databases & Cloud**: MySQL, Firebase (Firestore/Auth), Vercel, Render\n- **AI & ML**: CNN, MMCNN, Genetic Algorithms, PCA, Face Recognition, RAG & Chatbots\n- **Design & Tools**: Figma (UI/UX), Git, GitHub, Postman, IoT Microcontrollers"
+    },
+    {
+      "question": "Tell me about Arunkumar's published research papers.",
+      "answer": "Arunkumar has authored two peer-reviewed research papers indexed in IEEE Xplore:\n1. **ML based Smart e - Public Distribution System** (Nov 2025): Features face recognition, crowd detection queue management, and UPI payments for welfare transparency (https://ieeexplore.ieee.org/abstract/document/11382690).\n2. **ML Based Fruit Health and Quality Analysis System** (June 2025): Uses Multi-Modal CNN (MMCNN) fusing RGB image features with PCA-reduced spectral data, tuned with Genetic Algorithms for non-destructive agricultural grading (https://ieeexplore.ieee.org/abstract/document/11012639)."
+    },
+    {
+      "question": "What are his greatest achievements and awards?",
+      "answer": "Key achievements include:\n- **3rd Place in ISTI-Sponsored National-Level Project Contest** for the Pulse-Based Automated Portable Nebulizer (APN).\n- **Dual IEEE Conference Publications** as an undergraduate researcher.\n- **Commendation for Technical Paper Presentation** at Thiagarajar College of Engineering (TCE).\n- Consistent academic excellence with **8.84 CGPA** in B.Tech IT (Honors)."
+    },
+    {
+      "question": "What languages does Arunkumar speak?",
+      "answer": "Arunkumar is fluent in **English** (for professional communication and documentation) and **Tamil** (native speaker). He can communicate effectively across multicultural teams."
+    },
+    {
+      "question": "Can Arunkumar relocate or work remotely?",
+      "answer": "Yes! Arunkumar is based in Madurai, Tamil Nadu, and is fully flexible and enthusiastic about relocating to major tech hubs (Bengaluru, Chennai, Hyderabad, Pune, Mumbai, Delhi NCR, etc.) as well as working in hybrid or fully remote settings."
+    },
+    {
+      "question": "What are your weaknesses or areas of improvement?",
+      "answer": "Arunkumar tends to dive very deep into low-level architectural optimizations and perfectionism. To manage this effectively, he applies strict sprint timeboxing, adheres to agile MVP milestones, and continuously refines his public tech presentation skills."
+    },
+    {
+      "question": "Where is Arunkumar located and where does he live?",
+      "answer": "Arunkumar lives in Madurai, Tamil Nadu (54 Srinivasa Nagar, Thirunagar, Madurai - 625006). He is enthusiastic and ready to relocate to Bengaluru, Chennai, Hyderabad, Pune, or other tech hubs, or work remotely."
+    },
+    {
+      "question": "What are Arunkumar's internships and industry experience?",
+      "answer": "Arunkumar has completed two industry internships:\n1. **Elysium Technologies, Madurai (Full Stack Developer Intern, Feb 2024 - Mar 2024)**: Developed an enterprise Asset Management System with Spring Boot microservices, React.js frontend, and MySQL database, deployed on Vercel and Render.\n2. **Reccsar, Madurai (Web Development Intern, Jun 2023 - Jul 2023)**: Engineered responsive e-commerce web applications using HTML5, CSS3, JavaScript, and PHP/MySQL."
+    },
+    {
+      "question": "What are Arunkumar's top projects?",
+      "answer": "Arunkumar's top projects are:\n1. **Automated Portable Nebulization System (APN)** - IoT & Healthcare, 3rd Place ISTI National Contest.\n2. **ML based Smart e-PDS** - Computer Vision & Facial Recognition, IEEE Published.\n3. **Fruit Health and Quality Analysis System** - MMCNN + Genetic Algorithms, IEEE Published.\n4. **Asset Management System** - Spring Boot, React.js, MySQL (Live on Vercel).\n5. **Jewelry E-Commerce UX Design** - Figma interactive prototype."
+    }
+  ]
+}

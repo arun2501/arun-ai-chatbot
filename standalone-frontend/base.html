@@ -1,41 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css">
-
 <head>
     <meta charset="UTF-8">
-    <title>Chatbot</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arunkumar K R | Personal AI Chatbot</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:,">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Marked.js for fast client-side Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-<div class="container">
-   <div class="container">
-    <div class="chatbox">
-        <div class="chatbox__support">
-            <div class="chatbox__header">
-                <div class="chatbox__image--header">
-                  <img src="/static/images/TamilNadu_Logo.png" alt="தமிழ்நாடு அரசு சின்னம்" class="chatbox__image--header">
+
+<div class="app-layout">
+    <!-- Main Chat Container -->
+    <div class="chat-container">
+        <!-- Header -->
+        <header class="chat-header">
+            <div class="header-profile">
+                <div class="avatar-wrapper">
+                    <img src="images/arun1.jpg" alt="Arunkumar K R" class="avatar-img" onerror="this.src='https://ui-avatars.com/api/?name=Arun+Kumar&background=0082ca&color=fff'">
+                    <span class="status-dot" title="Online"></span>
                 </div>
-                <div class="chatbox__content--header">
-                    <h3 class="chatbox__heading--header">ஸ்மார்ட் e-PDS உதவி</h3>
-                    <p class="chatbox__description--header">வணக்கம்! நான் தமிழ்நாடு ஸ்மார்ட் e-PDS AI உதவியாளர்.</p>
+                <div class="header-info">
+                    <div class="name-badge-row">
+                        <h1 class="header-name">Arunkumar K R</h1>
+                        <span class="verified-pill"><i class="bi bi-patch-check-fill"></i> AI Persona</span>
+                    </div>
+                    <p class="header-subtitle">Full Stack Developer | B.Tech IT (Honors) @ VCET</p>
                 </div>
             </div>
-            <div class="chatbox__messages">
-                <div></div>
+
+            <div class="header-actions">
+                <a href="https://krarun-portfolio.netlify.app/assets/img/913122205009_KR%20ARUNKUMAR.pdf" target="_blank" class="action-btn" title="Download Official Resume PDF">
+                    <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                    <span>Resume</span>
+                </a>
+                <a href="https://krarun-portfolio.netlify.app/" target="_blank" class="action-btn" title="View Netlify Portfolio">
+                    <i class="bi bi-globe2"></i>
+                    <span>Portfolio</span>
+                </a>
+                <button id="syncBtn" class="action-btn" title="Sync Latest Information from Live Portfolio">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <span>Sync Live</span>
+                </button>
             </div>
-            <div class="chatbox__footer">
-                <input type="text" placeholder="உங்கள் கேள்வியை எழுதுங்கள்...">
-                <button class="chatbox__send--footer send__button">அனுப்பு</button>
+        </header>
+
+        <!-- Toast notification bar -->
+        <div id="toastNotification" class="toast-bar"></div>
+
+        <!-- Chat Messages Scroll Area -->
+        <main class="chat-messages" id="chatMessages">
+            <!-- Welcome Hero Box -->
+            <div class="welcome-hero" id="welcomeHero">
+                <div class="hero-badge"><i class="bi bi-patch-check-fill"></i> AI Portfolio Assistant</div>
+                <h2>Ask me anything about Arunkumar!</h2>
+                <p>I answer questions accurately across all angles: my <strong>8.84 CGPA</strong>, <strong>Elysium Technologies & Reccsar internships</strong>, <strong>national award-winning IoT Pulse Nebulizer</strong>, <strong>2 published IEEE papers</strong>, and core skills in <strong>Java, Spring Boot, React.js, and ML</strong>.</p>
+                
+                <div class="quick-prompts-label">Suggested Questions:</div>
+                <div class="quick-prompts-grid">
+                    <button class="prompt-chip" data-prompt="Tell me about your background and top projects.">
+                        <i class="bi bi-rocket-takeoff-fill"></i> Top Projects & Summary
+                    </button>
+                    <button class="prompt-chip" data-prompt="What was your role and work during your internship at Elysium Technologies?">
+                        <i class="bi bi-briefcase-fill"></i> Elysium Internship
+                    </button>
+                    <button class="prompt-chip" data-prompt="What is your college, degree, and current CGPA?">
+                        <i class="bi bi-mortarboard-fill"></i> Education & CGPA
+                    </button>
+                    <button class="prompt-chip" data-prompt="Tell me about your published research papers in IEEE.">
+                        <i class="bi bi-journal-bookmark-fill"></i> IEEE Research Papers
+                    </button>
+                    <button class="prompt-chip" data-prompt="What are your technical skills in Java, React, and Machine Learning?">
+                        <i class="bi bi-code-slash"></i> Tech Stack & Skills
+                    </button>
+                    <button class="prompt-chip" data-prompt="Why should a software company hire Arunkumar?">
+                        <i class="bi bi-star-fill"></i> Why Hire Arun?
+                    </button>
+                    <button class="prompt-chip" data-prompt="How can I contact Arunkumar or download his resume?">
+                        <i class="bi bi-telephone-fill"></i> Contact & Resume
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="typing-avatar">
+                <img src="images/arun1.jpg" alt="Arun" onerror="this.src='https://ui-avatars.com/api/?name=Arun+Kumar&background=0082ca&color=fff'">
+            </div>
+            <div class="typing-bubble">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="typing-text">Arun AI is thinking...</span>
             </div>
         </div>
+
+        <!-- Chat Input Footer -->
+        <footer class="chat-footer">
+            <div class="input-wrapper">
+                <button id="micBtn" class="input-icon-btn" title="Voice Input (Speech-to-Text)">
+                    <i class="bi bi-mic-fill"></i>
+                </button>
+                <textarea id="userInput" placeholder="Ask anything about Arun (e.g. projects, skills, CGPA, hiring)..." rows="1"></textarea>
+                <button id="sendBtn" class="send-btn" title="Send Question (Enter)">
+                    <i class="bi bi-send-fill"></i>
+                </button>
+            </div>
+            <div class="footer-meta">
+                <span><i class="bi bi-shield-check"></i> Official AI Assistant for Arunkumar K R</span>
+                <span class="footer-dot">•</span>
+                <a href="https://krarun-portfolio.netlify.app/" target="_blank">krarun-portfolio.netlify.app</a>
+            </div>
+        </footer>
     </div>
-   </div>
 </div>
 
-    <script src="./app.js"></script>
-    
-
+<script src="./app.js"></script>
 </body>
 </html>

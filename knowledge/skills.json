@@ -1,0 +1,55 @@
+{
+  "skills_overview": "Arunkumar possesses a versatile tech stack covering Backend, Frontend, Cloud, Databases, Machine Learning, and UI/UX design.",
+  "categories": [
+    {
+      "name": "Backend Development",
+      "skills": [
+        {"name": "Java", "level": "Advanced", "description": "Core Java, OOP, Collections, Multithreading, Exception Handling, Streams API"},
+        {"name": "Spring Boot", "level": "Advanced", "description": "RESTful Microservices, Spring Data JPA, Hibernate, Dependency Injection, Security"},
+        {"name": "Python", "level": "Intermediate to Advanced", "description": "Scripting, Data processing, ML pipelines, Flask, NumPy, Pandas"},
+        {"name": "Node.js", "level": "Intermediate", "description": "Backend API development, Express, asynchronous programming"}
+      ]
+    },
+    {
+      "name": "Frontend Web Development",
+      "skills": [
+        {"name": "React.js", "level": "Advanced", "description": "Functional components, Hooks (useState, useEffect, useContext), State management, Component lifecycle"},
+        {"name": "JavaScript (ES6+)", "level": "Advanced", "description": "Modern syntax, async/await, DOM manipulation, Fetch/Axios API integration"},
+        {"name": "HTML5 & CSS3", "level": "Expert", "description": "Semantic markup, modern layout techniques, Flexbox, CSS Grid, Responsive Web Design"},
+        {"name": "Tailwind CSS & Bootstrap", "level": "Advanced", "description": "Utility-first modern styling, responsive component design, animations"}
+      ]
+    },
+    {
+      "name": "Databases & Cloud",
+      "skills": [
+        {"name": "MySQL / Relational SQL", "level": "Advanced", "description": "Schema design, normalization, complex queries, joins, indexes, transaction management"},
+        {"name": "Firebase", "level": "Intermediate", "description": "Firestore database, Firebase Authentication, Cloud Storage, real-time sync"},
+        {"name": "Cloud Deployment", "level": "Intermediate", "description": "Vercel, Render, Netlify, basic Docker & Heroku deployment pipelines"}
+      ]
+    },
+    {
+      "name": "Machine Learning & AI",
+      "skills": [
+        {"name": "Machine Learning", "level": "Intermediate to Advanced", "description": "Supervised/unsupervised learning, classification, regression, model evaluation"},
+        {"name": "Computer Vision & CNN", "level": "Advanced", "description": "Convolutional Neural Networks, Multi-Modal CNN (MMCNN), image preprocessing, facial recognition"},
+        {"name": "Dimensionality Reduction & Optimization", "level": "Intermediate", "description": "PCA (Principal Component Analysis), Genetic Algorithms (GA) for hyperparameter tuning"},
+        {"name": "Retrieval-Augmented Generation (RAG)", "level": "Advanced", "description": "Vector indexing, semantic search, context injection, prompt engineering, chatbot workflows"}
+      ]
+    },
+    {
+      "name": "UI/UX & Design Tools",
+      "skills": [
+        {"name": "Figma", "level": "Advanced", "description": "High-fidelity wireframing, interactive prototyping, UI design systems, component libraries"},
+        {"name": "User-Centered Design", "level": "Advanced", "description": "Information architecture, visual hierarchy, mobile-first design, accessibility"}
+      ]
+    },
+    {
+      "name": "Developer Tools & Version Control",
+      "skills": [
+        {"name": "Git & GitHub", "level": "Advanced", "description": "Version control, branching, PRs, collaborative workflows, CI/CD"},
+        {"name": "Postman", "level": "Advanced", "description": "REST API testing, endpoint debugging, payload verification"},
+        {"name": "IoT Hardware & Sensors", "level": "Intermediate", "description": "Microcontrollers, Wi-Fi modules (ESP8266/ESP32), pulse sensors, actuators"}
+      ]
+    }
+  ]
+}

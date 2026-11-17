@@ -1,0 +1,34 @@
+{
+  "internships": [
+    {
+      "company": "Elysium Technologies Pvt. Ltd",
+      "role": "Full Stack Developer Intern",
+      "location": "Madurai, Tamil Nadu, India",
+      "duration": "June 2024 - July 2024",
+      "technologies": ["React.js", "Spring Boot", "Spring Data JPA", "MySQL", "Tailwind CSS", "Axios", "REST APIs", "Vercel", "Render"],
+      "summary": "Built a production-ready, full-stack Asset Management System featuring role-based access control, employee management, online asset tracking, and maintenance monitoring.",
+      "key_contributions": [
+        "Architected scalable backend RESTful microservices using Spring Boot and Spring Data JPA with MySQL database integration.",
+        "Built dynamic, responsive user interfaces in React.js styled with Tailwind CSS, utilizing Axios for seamless API communication.",
+        "Implemented secure role-based access control (RBAC) separating administrative controls from standard employee actions.",
+        "Engineered an administrative dashboard with real-time analytics, equipment status tracking, maintenance schedules, and audit logs.",
+        "Deployed frontend onto Vercel and backend microservices onto Render cloud, achieving high reliability and reducing manual tracking effort.",
+        "Live Demo: https://asset-frontend-xi.vercel.app/ | GitHub: https://github.com/Arunkumar1234KR/Asset_Management_System"
+      ]
+    },
+    {
+      "company": "Reccsar Private Limited",
+      "role": "Web Development Intern",
+      "location": "Madurai, Tamil Nadu, India",
+      "duration": "December 2023 - January 2024",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js"],
+      "summary": "Led the end-to-end development of a comprehensive portfolio and e-commerce retail platform.",
+      "key_contributions": [
+        "Designed clean, responsive web pages and user-friendly product and project catalogs.",
+        "Implemented interactive shopping cart, order checkout flows, contact form integration, and profile management.",
+        "Integrated Node.js backend logic for processing orders and inquiries.",
+        "Ensured cross-browser compatibility and optimized page load speed."
+      ]
+    }
+  ]
+}

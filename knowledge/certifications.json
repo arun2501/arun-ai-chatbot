@@ -1,0 +1,53 @@
+{
+  "certifications": [
+    {
+      "title": "Wipro TalentNext - Java Full Stack (Digital Skills Readiness Program)",
+      "issuer": "Wipro",
+      "year": "2025",
+      "focus": "Enterprise Java, Spring Boot, Microservices, Frontend Integration, Agile Engineering Practices"
+    },
+    {
+      "title": "IBM - Artificial Intelligence (AI)",
+      "issuer": "IBM",
+      "focus": "Machine Learning Fundamentals, Neural Networks, Natural Language Processing, Ethical AI"
+    },
+    {
+      "title": "TCS iON Career Edge – Young Professional",
+      "issuer": "Tata Consultancy Services (TCS iON)",
+      "focus": "Business Etiquette, Presentation Skills, Financial Literacy, Problem Solving, Workplace Communication"
+    },
+    {
+      "title": "Cybersecurity for Beginners",
+      "issuer": "Microsoft",
+      "focus": "Network Security, Threat Modeling, Identity & Access Management, Cryptography Basics"
+    },
+    {
+      "title": "E-Business",
+      "issuer": "NPTEL (National Programme on Technology Enhanced Learning)",
+      "focus": "E-Commerce Architectures, Digital Payment Ecosystems, Supply Chain Automation"
+    },
+    {
+      "title": "Generative AI",
+      "issuer": "Project Management Institute (PMI) / LinkedIn Learning",
+      "focus": "LLM Workflows, Prompt Engineering, Generative Models in Project Management and Software Engineering"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "3rd Place - National Level Project Contest",
+      "sponsor": "ISTI (Inter-School / State Technical Innovation)",
+      "project": "Pulse-Based Automated Portable Nebulizer (APN)",
+      "description": "Competed against top engineering teams across the country and secured 3rd prize for developing an IoT pulse-adaptive nebulizer."
+    },
+    {
+      "title": "Paper Presentation Recognition at TCE",
+      "institution": "Thiagarajar College of Engineering (TCE), Madurai",
+      "description": "Selected and commended for presenting technical research on emerging computing and smart automation."
+    },
+    {
+      "title": "Dual IEEE Xplore Author",
+      "institution": "IEEE",
+      "description": "Successfully authored and presented two peer-reviewed research papers in IEEE international conferences within his undergraduate tenure."
+    }
+  ]
+}

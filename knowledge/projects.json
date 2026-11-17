@@ -1,0 +1,81 @@
+{
+  "projects": [
+    {
+      "id": "apn_nebulizer",
+      "title": "Automated Portable Nebulization System (APN)",
+      "category": "Internet of Things (IoT) & Smart Healthcare",
+      "date": "March 2025",
+      "overview": "An innovative portable nebulizer that continuously monitors patient pulse signals in real-time and automatically adapts medication dosage delivery over Wi-Fi.",
+      "technologies": ["IoT", "Pulse Sensor", "Microcontroller", "Wi-Fi (ESP module)", "Actuators", "Adaptive Control Algorithms", "C/C++", "Python"],
+      "problem_solved": "Conventional nebulizers deliver a fixed medication rate regardless of the patient's respiratory urgency or heart rate vitals, which can lead to suboptimal therapeutic delivery or over-medication. APN personalizes drug aerosol delivery dynamically.",
+      "key_features": [
+        "Real-time pulse and heart rate monitoring through integrated optical pulse sensor",
+        "Adaptive dosage calculation algorithm adjusting ultrasonic/mesh nebulizer actuator frequency",
+        "Wi-Fi enabled tele-health dashboard allowing remote doctor/caregiver monitoring",
+        "Compact, lightweight, battery-operated portable design for asthmatic and COPD patients"
+      ],
+      "achievement": "Awarded 3rd Place in the Prestigious ISTI-Sponsored National-Level Project Contest (Pulse-Based Automated Portable Nebulizer)."
+    },
+    {
+      "id": "ml_smart_epds",
+      "title": "ML-Based Smart e-Public Distribution System (Smart e-PDS)",
+      "category": "AI / Machine Learning & Full Stack Web Platform",
+      "date": "June 2025 - November 2025",
+      "overview": "A next-generation Public Distribution System that eliminates ration shop leakage, phantom beneficiaries, and long wait times using AI/ML facial recognition, crowd monitoring, and seamless digital payments.",
+      "technologies": ["Machine Learning", "Face Recognition (OpenCV / CNN)", "React.js", "Tailwind CSS", "Firebase (Firestore, Auth, Storage)", "REST APIs", "UPI Payment Integration", "Voice Chatbot"],
+      "problem_solved": "Traditional ration distribution suffers from fraudulent withdrawals, identity spoofing, proxy ration collection, and hours-long queue congestion, especially for senior citizens and differently-abled individuals.",
+      "key_features": [
+        "Biometric AI Facial Recognition and OTP two-factor authentication to ensure rations reach genuine beneficiaries",
+        "Smart Card integration with real-time monthly ration quota calculation and digital stock transparency",
+        "Real-time queue monitoring utilizing AI crowd detection computer vision to display live queue status to citizens",
+        "Online monthly ration pre-selection, digital UPI payment gateway, and instant automated digital invoice generation",
+        "Voice-enabled multimodal AI assistant designed for accessibility in local languages (Tamil & English)"
+      ],
+      "publication": "Published in IEEE Xplore: 'ML based Smart e - Public Distribution System' (DOI/URL: https://ieeexplore.ieee.org/abstract/document/11382690, Date: November 2025)."
+    },
+    {
+      "id": "fruit_health_analysis",
+      "title": "ML Based Fruit Health and Quality Analysis System",
+      "category": "Computer Vision, Spectral Analysis & AI Research",
+      "date": "June 2025",
+      "overview": "A novel Multi-Modal Convolutional Neural Network (MMCNN) system combining high-resolution visual RGB images and spectral data to grade fruit quality, detect internal/external diseases, and measure chemical properties.",
+      "technologies": ["Multi-Modal CNN (MMCNN)", "RGB Image Processing", "Principal Component Analysis (PCA)", "Genetic Algorithm (GA)", "Python", "TensorFlow / PyTorch", "Scikit-Learn"],
+      "key_features": [
+        "Extracts fine-grained spatial features from visual RGB images using Deep Convolutional Neural Networks (CNN)",
+        "Reduces high-dimensional spectral data using Principal Component Analysis (PCA) to correlate with internal chemical indicators (sugar levels, moisture content, acidity)",
+        "Fuses spatial and spectral feature vectors into a unified multi-modal representation",
+        "Optimizes deep neural network hyperparameters using a Genetic Algorithm (GA), achieving superior classification accuracy, high precision, and drastically lower false predictions"
+      ],
+      "impact": "Empowers agricultural exporters, farmers, and automated sorting packhouses to non-destructively grade produce, maximize export revenue, and curb post-harvest losses.",
+      "publication": "Published in IEEE Xplore: 'ML Based Fruit Health and Quality Analysis System' (DOI/URL: https://ieeexplore.ieee.org/abstract/document/11012639, Date: June 2025)."
+    },
+    {
+      "id": "asset_management_system",
+      "title": "Enterprise Asset Management & Tracking System",
+      "category": "Full Stack Cloud Application",
+      "date": "March 2026",
+      "overview": "A comprehensive cloud-native asset management system designed for enterprise operational efficiency, asset lifecycle tracking, and preventive maintenance.",
+      "technologies": ["React.js", "Spring Boot", "MySQL", "Tailwind CSS", "Axios", "REST APIs", "Vercel", "Render"],
+      "live_demo": "https://asset-frontend-xi.vercel.app/",
+      "github": "https://github.com/Arunkumar1234KR/Asset_Management_System",
+      "key_features": [
+        "Role-based authentication & authorization (Admin, Manager, Employee)",
+        "Real-time asset registration, check-in/check-out lifecycle tracking, and depreciation calculation",
+        "Preventive maintenance scheduling with automated reminders and service records",
+        "Rich administrative analytics dashboard with charts and printable audit logs"
+      ]
+    },
+    {
+      "id": "jewelry_ux_design",
+      "title": "Luxury Jewelry Website UI/UX Design",
+      "category": "UI / UX Design & Prototyping",
+      "date": "January 2025",
+      "overview": "A luxury e-commerce interactive prototype engineered in Figma, showcasing elegant aesthetics, intuitive user journeys, and seamless product discovery.",
+      "technologies": ["Figma", "UI/UX Design", "Wireframing", "Interactive Prototyping", "Design Systems"],
+      "key_features": [
+        "End-to-end user journey: Curated hero showcase, categorized collections, interactive product view, cart, and frictionless checkout",
+        "Consistent typography, luxury color harmony, and micro-interactions optimized for luxury retail consumer retention"
+      ]
+    }
+  ]
+}

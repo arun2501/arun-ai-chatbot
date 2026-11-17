@@ -1,0 +1,39 @@
+{
+  "education": [
+    {
+      "degree": "Bachelor of Technology (B.Tech) in Information Technology (Honors)",
+      "institution": "Velammal College of Engineering and Technology, Madurai",
+      "location": "Madurai, Tamil Nadu, India",
+      "duration": "2022 - 2026",
+      "cgpa": "8.84 / 10 (8.76 / 10)",
+      "status": "Final Year Pursuing (Graduating in 2026)",
+      "key_courses": [
+        "Data Structures and Algorithms",
+        "Object-Oriented Programming (Java & C++)",
+        "Database Management Systems (SQL)",
+        "Operating Systems",
+        "Computer Networks",
+        "Machine Learning & Artificial Intelligence",
+        "Web Technologies & Full Stack Development",
+        "Software Engineering & Agile Methodologies"
+      ],
+      "highlights": "Honors degree student maintaining an outstanding academic record, active contributor to college tech symposiums, project contests, and research publications."
+    },
+    {
+      "degree": "Higher Secondary Certificate (HSC) - 12th Grade",
+      "institution": "Muthuthevar Mukkulathore Higher Secondary School",
+      "location": "Madurai, Tamil Nadu",
+      "duration": "2020 - 2022",
+      "year": "2022",
+      "percentage": "92.50%",
+      "stream": "Mathematics and Science with Computer Science"
+    },
+    {
+      "degree": "Secondary School Leaving Certificate (SSLC) - 10th Grade",
+      "institution": "Muthuthevar Mukkulathore Higher Secondary School",
+      "location": "Madurai, Tamil Nadu",
+      "year": "2020",
+      "percentage": "85.40%"
+    }
+  ]
+}
